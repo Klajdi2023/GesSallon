@@ -1,0 +1,143 @@
+body{
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('../photos/gs1.avif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: scroll;
+    height: 100vh; /* Ensures at least viewport height is covered */
+    min-height: 500px; /* Adjust based on your design needs */
+    display: flex;
+    position: relative; /* Changed to relative for better handling on mobile */
+    justify-content: center;
+    align-items: center;
+}
+
+.navigation {
+    background: black;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+}
+
+.logo {
+    max-height: 50px;
+    margin-left: 10px;
+}
+
+.nav-buttons {
+    margin-right: 10px;
+}
+
+.nav-button {
+    background-color: #000000;
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none;
+    border: 2px solid white;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.nav-button:hover {
+    background-color: #ff6347;
+}
+
+.navbar-brand {
+    font-size: 24px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    margin: 0;
+    color: white;
+}
+.welcome-message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff; /* This can be a bright color that suits a neon effect */
+    font-size: 6rem; /* Increased size for emphasis */
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    z-index: 5;
+    /* Neon effect styling */
+    text-shadow:
+        0 0 10px #ff2d2d, /* Red glow */
+        0 0 20px #ff2d2d, /* Red glow */
+        0 0 30px #ff2d2d, /* Red glow */
+        0 0 40px #ff2d2d, /* Red glow */
+        0 0 50px #ff2d2d, /* Red glow */
+        0 0 60px #ff2d2d, /* Red glow */
+        0 0 70px #ff2d2d, /* Red glow */
+        0 0 80px #ff2d2d, /* Red glow */
+        0 0 100px #ff2d2d, /* Red glow */
+        0 0 120px #ff2d2d; /* Red glow */
+}
+
+@media (max-width: 768px) {
+    .welcome-message {
+        font-size: 5rem; /* Adjust size for smaller screens */
+        text-shadow:
+            0 0 7px #ff2d2d,
+            0 0 14px #ff2d2d,
+            0 0 21px #ff2d2d,
+            0 0 28px #ff2d2d,
+            0 0 35px #ff2d2d,
+            0 0 42px #ff2d2d; /* Shorter glow effect for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .welcome-message {
+        font-size: 4rem; /* Adjust size for very small screens */
+        text-shadow:
+            0 0 5px #ff2d2d,
+            0 0 10px #ff2d2d,
+            0 0 15px #ff2d2d,
+            0 0 20px #ff2d2d; /* Even shorter glow effect for very small screens */
+    }
+}
+
+
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .navigation {
+        flex-direction: column;
+        height: auto;
+        padding: 20px 0;
+    }
+
+    .nav-buttons {
+        margin-top: 10px;
+    }
+
+    .nav-button {
+        margin: 5px; /* Adjust spacing for smaller screens */
+    }
+
+    .header {
+        padding-top: 100px; /* Increase padding to accommodate taller nav */
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-button {
+        padding: 10px; /* Adjust button size for very small screens */
+        font-size: calc(5px + 2vw); /* Larger font size for readability */
+    }
+
+    .navbar-brand {
+        font-size: calc(12px + 2vw);
+    }
+}

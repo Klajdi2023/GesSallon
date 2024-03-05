@@ -1,0 +1,130 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('../photos/gs1.avif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: scroll;
+    height: 100vh; /* Ensures at least viewport height is covered */
+    min-height: 500px; /* Adjust based on your design needs */
+    display: flex;
+    position: relative; /* Changed to relative for better handling on mobile */
+    justify-content: center;
+    align-items: center;
+    padding-top: 60px; /* Add top padding to push the content below the navbar */
+    box-sizing: border-box;
+}
+
+.table-container {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%; /* More responsive */
+    max-width: 80%; /* Ensure it doesn't get too big */
+    max-height: 60%;
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    overflow-y: auto; /* Ensures table is scrollable on small devices */
+    height: auto; /* Adjust height to be auto so it scales with the content */
+    margin-bottom: 20px;
+}
+
+.week-days-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.week-days-table th, .week-days-table td {
+    border: 2px solid #ddd;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.navigation {
+    background: black;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    height: 50px;
+}
+
+.logo {
+    max-height: 50px;
+    margin-left: 10px;
+}
+
+.nav-buttons {
+    margin-right: 10px;
+}
+
+.nav-button {
+    background-color: #000000;
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none;
+    border: 2px solid white;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.nav-button:hover {
+    background-color: #ff6347;
+}
+
+.navbar-brand {
+    font-size: 24px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    margin: 0;
+    color: white;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .navigation {
+        flex-direction: column;
+        height: auto;
+        padding: 20px 0;
+    }
+
+    .nav-buttons {
+        margin-top: 10px;
+    }
+
+    .nav-button {
+        margin: 5px; /* Adjust spacing for smaller screens */
+    }
+    .table-container {
+        padding: 10px; /* Less padding on small screens */
+    }
+
+    .week-days-table th, .week-days-table td {
+        padding: 5px; /* Smaller padding for table cells */
+    }
+}
+
+@media (max-width: 480px) {
+    .navigation {
+        flex-direction: column;
+        height: auto; /* Adjust navigation layout */
+    }
+
+    .nav-buttons {
+        margin-top: 10px;
+    }
+
+    .nav-button {
+        padding: 10px; /* Adjust button padding */
+    }
+}
